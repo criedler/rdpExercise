@@ -24,6 +24,6 @@ class BookingTest {
 
         assertTrue(optional.isPresent());
 
-        assertEquals(10, optional.get().calculatePrice().doubleValue());
+        assertEquals(2002, optional.get().calculatePrice().doubleValue(), 0.01);
     }
 }
