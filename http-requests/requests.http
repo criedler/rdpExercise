@@ -37,3 +37,6 @@ Content-Type: application/json
     }
   ]
 }
+
+### read clients
+GET http://localhost:8080/customer/list
