@@ -3,8 +3,6 @@ package htl.steyr.rdp.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.util.List;
-
 @Data
 @Entity
 @Table(name = "category")
@@ -15,7 +13,4 @@ public class Category {
 
     @Column(name = "name", nullable = false)
     private String name;
-
-    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
-    private List<Apartment> apartment;
 }

@@ -1,3 +1,6 @@
+### read clients
+GET http://localhost:8080/customer/list
+
 ### create a new booking
 POST http://localhost:8080/booking/create
 Content-Type: application/json
@@ -38,5 +41,4 @@ Content-Type: application/json
   ]
 }
 
-### read clients
-GET http://localhost:8080/customer/list
+### complete with your requests
