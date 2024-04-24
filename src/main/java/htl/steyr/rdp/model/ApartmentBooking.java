@@ -24,6 +24,7 @@ public class ApartmentBooking {
     @JoinColumn(name = "apartment_id", nullable = false)
     private Apartment apartment;
 
-    @Column(name = "booking_id", nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "booking_id", nullable = false)
     private Booking booking;
 }

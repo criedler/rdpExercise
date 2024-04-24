@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Data
 @Entity
@@ -26,4 +27,7 @@ public class Apartment {
     @ManyToOne
     @JoinColumn(name = "category_id", nullable=false)
     private Category category;
+
+    @OneToMany(mappedBy = "apartment")
+    private List<ApartmentBooking> apartmentBookings;
 }

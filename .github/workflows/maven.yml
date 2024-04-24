@@ -16,7 +16,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    
+
     services:
       mysql:
         image: mysql:8.0
@@ -41,6 +41,9 @@ jobs:
 
     - name: Test with Maven
       run: mvn -B test --batch-mode --no-transfer-progress --file pom.xml
+
+    - name: JUnit Report Action
+      uses: mikepenz/action-junit-report@v4
 
     - name: Upload JAR artifact
       uses: actions/upload-artifact@v2

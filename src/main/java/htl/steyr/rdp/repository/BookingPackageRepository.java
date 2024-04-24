@@ -1,0 +1,7 @@
+package htl.steyr.rdp.repository;
+
+import htl.steyr.rdp.model.BookingPackage;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface BookingPackageRepository extends JpaRepository<BookingPackage, Long> {
+}
