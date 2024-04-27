@@ -45,6 +45,16 @@ jobs:
     - name: JUnit Report Action
       uses: mikepenz/action-junit-report@v4
 
+    - name: Report
+      uses: dorny/test-reporter@v1
+      if: always()
+      with:
+        name: Maven Tests
+        path: target/surefire-reports/*.xml
+        reporter: java-junit
+        fail-on-error: true
+
+
     - name: Upload JAR artifact
       uses: actions/upload-artifact@v2
       with:
